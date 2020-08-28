@@ -44,9 +44,9 @@ i.e. is31Flavors(originalFlavors) will return TRUE.*/
 
 function is31Flavors(a) {
   if (a === 31) {
-    return "TRUE";
+    return true;
   } else {
-    return "FALSE";
+    return false;
   }
 }
 
@@ -139,14 +139,14 @@ Your function should accept:
 
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
 
-// function copy(a, b) {
-//   b = a.slice(0);
-//   return b;
-// }
+function copy(a, b) {
+  b = [...a];
+  return b;
+}
 
-// let cloneOf31flavors = copy(originalFlavors, cloneOf31flavors);
+let cloneOf31flavors = copy(originalFlavors, 1);
 
-// console.log(cloneOf31flavors);
+console.log(cloneOf31flavors);
 
 /* Task 7: July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. Write a function that checks every item in the array for a given string and returns a new array called filteredArray with just these values. Rather than hardcoding "chocolate" into your function, pass a string as a parameter, and invoke with the argument "chocolate". This way you could also filter for "Vanilla", "Sherbert", etc. when those holidays roll around.
 
